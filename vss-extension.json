@@ -1,11 +1,10 @@
 {
 	"manifestVersion": 1,
-	"id": "RS.Code.BuildDefinitionFromHere",
-	"version": "0.1.0",
+	"id": "RS-Code-BuildDefinitionFromHere",
+	"version": "0.1.3",
 	"name": "Build Definition from here",
 	"description": "Easily create your build definition from a specific path in your repository",
-	"publisher": "Ricardo Serradas",
-	//"baseUri": "http://localhost/build-definition-from-here",
+	"publisher": "ricardoserradasext",
 	"icons": {
 		"default": "images/logo.png"
 	},
@@ -15,7 +14,7 @@
 		"repository"
     ],
     "categories": [
-        "Build and release", "Code"
+        "Build and release"
     ],
 	"content": {
 		"details": {
@@ -31,7 +30,7 @@
 		"color": "rgb(0, 128, 0)",
 		"theme": "dark"
 	},
-	"public": true,
+	"public": false,
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -39,7 +38,7 @@
     ],
 	"contributions": [
 		{
-			"id": "RS.Code.BuildDefinitionFromHere.build-menu-item",
+			"id": "RS-Code-BuildDefinitionFromHere-build-menu-item",
 			"description": "The menu option to create a build definition from there.",
 			"type": "ms.vss-web.action",
 			"targets": [
