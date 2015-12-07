@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <title>Build Menu Item Test</title>
+ </head>
+ <body>
+     <div>
+         This is only a test for the menu item.
+		 Let's see how it's working!
+     </div>
+ </body>
+ <script src="sdk/scripts/VSS.SDK.js"></script>
+ <script>
+      VSS.init();
+
+      // Use an IIFE to create an object that satisfies the IContributedMenuSource contract
+      var menuContributionHandler = (function () {
+         "use strict";
+         return {
+             // This is a callback that gets invoked when a user clicks the newly contributed menu item
+             // The actionContext parameter contains context data surrounding the circumstances of this
+             // action getting invoked.
+             execute: function (actionContext) {
+                 alert("This is the Build from here menu item!");
+             }
+         };
+     }());
+
+     // Associate the menuContributionHandler object with the "myAction" menu contribution from the manifest.
+     VSS.register("RS.Code.BuildDefinitionFromHere.build-menu-item", menuContributionHandler);
+ </script>
+
+ </html>
